@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>The_Bank_of_Random_Credit_Authorizer_dotNet_Test</RootNamespace>
+
+    <IsPackable>false</IsPackable>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.0.1"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="Moq.EntityFrameworkCore" Version="5.0.0.1" />
+    <PackageReference Include="WonderfulWidgets.CreditCardValidator" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Credit-Card-Validator">
+      <HintPath>..\The-Bank-of-Random-Credit-Authorizer-dotNET\Lib\Credit-Card-Validator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\The-Bank-of-Random-Credit-Authorizer\The-Bank-of-Random-Credit-Authorizer.csproj" />
+  </ItemGroup>
+</Project>

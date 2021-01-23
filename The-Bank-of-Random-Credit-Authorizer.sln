@@ -1,0 +1,38 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The-Bank-of-Random-Credit-Authorizer", "The-Bank-of-Random-Credit-Authorizer\The-Bank-of-Random-Credit-Authorizer.csproj", "{BD67AC6A-7BC4-493A-83EA-CBADB0E88A09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The-Bank-of-Random-Credit-Authorizer-Test", "The-Bank-of-Random-Credit-Authorizer-Test\The-Bank-of-Random-Credit-Authorizer-Test.csproj", "{6D42F257-D87A-47C9-9A15-C34F5EF76281}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD67AC6A-7BC4-493A-83EA-CBADB0E88A09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD67AC6A-7BC4-493A-83EA-CBADB0E88A09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD67AC6A-7BC4-493A-83EA-CBADB0E88A09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD67AC6A-7BC4-493A-83EA-CBADB0E88A09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D42F257-D87A-47C9-9A15-C34F5EF76281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D42F257-D87A-47C9-9A15-C34F5EF76281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D42F257-D87A-47C9-9A15-C34F5EF76281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF1AE381-D7CD-47E5-ACC0-6F194B19E68A}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.StandardHeader = $2
+		version = 1.0.0
+		description = @This library provides a credit card purchase payment authorizer that randomly decides (50/50). The class will only\nallow the purchase if the card number is a valid card number. If the class constructor is called without arguments\nit instantiates its own CreditCardValidator. If it is called with an ICardValidator instance it uses it. This allows for\na demonstration of dependcy injection.\n\nPaired with the sister Everyone is Authorized client both libraries create a scenario to demonstrate the problems\nof tightly coupling a class to a dependency, and using dependency injection and the Adapter Pattern to\ndecouple the dependency and allow for test-doubles to be injected in their place.
+	EndGlobalSection
+EndGlobal

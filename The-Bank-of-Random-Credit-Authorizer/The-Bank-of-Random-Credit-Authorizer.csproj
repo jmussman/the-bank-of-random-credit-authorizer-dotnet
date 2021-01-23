@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>com.thebankofrandomcredit.cardservices</RootNamespace>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
+    <PackageId>TheBankOfRandomCredit.Authorizer</PackageId>
+    <Authors>Joel Mussman</Authors>
+    <Copyright>Copyright © 2018-2021 Joel Mussman. All rights reserved.</Copyright>
+    <PackageIconUrl>https://github.com/jmussman/the-bank-of-random-credit-authorizer-dotnet/logo.png</PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/jmussman/the-bank-of-random-credit-authorizer-dotnet/LICENSE.md</PackageLicenseUrl>
+    <Owners>Joel Mussman</Owners>
+    <PackageProjectUrl>https://github.com/jmussman/the-bank-of-random-credit-authorizer-dotnet</PackageProjectUrl>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <Summary>C# class demonstrating tight coupling.</Summary>
+    <Title>The Bank of Random Credit Authorizer</Title>
+    <Description>This library provides a credit card purchase payment authorizer that randomly decides (50/50). The class will only
+allow the purchase if the card number is a valid card number. If the class constructor is called without arguments
+it instantiates its own CreditCardValidator. If it is called with an ICardValidator instance it uses it. This allows for
+a demonstration of dependcy injection.
+
+Paired with the sister Everyone is Authorized client both libraries create a scenario to demonstrate the problems
+of tightly coupling a class to a dependency, and using dependency injection and the Adapter Pattern to
+decouple the dependency and allow for test-doubles to be injected in their place.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+    <DocumentationFile>bin\Release\netcoreapp3.1\The-Bank-of-Random-Credit-Authorizer.xml</DocumentationFile>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>cp The-Bank-of-Random-Credit-Authorizer.md "${SolutionDir}/docs/index.md"</command>
+          <workingdir>${TargetDir}</workingdir>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="CardServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="WonderfulWidgets.CreditCardValidator" Version="1.0.0" />
+    <PackageReference Include="Vsxmd" Version="1.4.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
