@@ -5,7 +5,7 @@
     <RootNamespace>The_Bank_of_Random_Credit_Authorizer_dotNet_Test</RootNamespace>
 
     <IsPackable>false</IsPackable>
-    <ReleaseVersion>1.0.0</ReleaseVersion>
+    <ReleaseVersion>1.0.1</ReleaseVersion>
   </PropertyGroup>
 
   <ItemGroup>
