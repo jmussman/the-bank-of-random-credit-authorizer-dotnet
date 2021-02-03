@@ -3,13 +3,13 @@
 
 ## Contents
 
-- [BankOfRandomCreditAuthorizer](#T-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer 'TheBankOfRandomCredit.CardServices.BankOfRandomCreditAuthorizer')
-  - [#ctor()](#M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-#ctor 'TheBankOfRandomCredit.CardServices.BankOfRandomCreditAuthorizer.#ctor')
-  - [#ctor(creditCardValidator)](#M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-#ctor-OpenCardServices-Validator-ICreditCardValidator- 'TheBankOfRandomCredit.CardServices.BankOfRandomCreditAuthorizer.#ctor(OpenCardServices.Validator.ICreditCardValidator)')
-  - [Purchase(cardNumber,amount)](#M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-Purchase-System-String,System-Decimal- 'TheBankOfRandomCredit.CardServices.BankOfRandomCreditAuthorizer.Purchase(System.String,System.Decimal)')
+- [AuthorizationService](#T-TheBankOfRandomCredit-CardServices-AuthorizationService 'TheBankOfRandomCredit.CardServices.AuthorizationService')
+  - [#ctor()](#M-TheBankOfRandomCredit-CardServices-AuthorizationService-#ctor 'TheBankOfRandomCredit.CardServices.AuthorizationService.#ctor')
+  - [#ctor(creditCardValidator)](#M-TheBankOfRandomCredit-CardServices-AuthorizationService-#ctor-OpenCardServices-Validator-ICreditCardValidator- 'TheBankOfRandomCredit.CardServices.AuthorizationService.#ctor(OpenCardServices.Validator.ICreditCardValidator)')
+  - [Submit(number,name,expires,ccv,amount)](#M-TheBankOfRandomCredit-CardServices-AuthorizationService-Submit-System-String,System-String,System-String,System-String,System-Decimal- 'TheBankOfRandomCredit.CardServices.AuthorizationService.Submit(System.String,System.String,System.String,System.String,System.Decimal)')
 
-<a name='T-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer'></a>
-## BankOfRandomCreditAuthorizer `type`
+<a name='T-TheBankOfRandomCredit-CardServices-AuthorizationService'></a>
+## AuthorizationService `type`
 
 ##### Namespace
 
@@ -19,7 +19,7 @@ TheBankOfRandomCredit.CardServices
 
 Client interface to the credit card processing services for the Bank of Random Credit.
 
-<a name='M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-#ctor'></a>
+<a name='M-TheBankOfRandomCredit-CardServices-AuthorizationService-#ctor'></a>
 ### #ctor() `constructor`
 
 ##### Summary
@@ -30,7 +30,7 @@ Create an authorizer using an instance of CreditCardValidator.
 
 This constructor has no parameters.
 
-<a name='M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-#ctor-OpenCardServices-Validator-ICreditCardValidator-'></a>
+<a name='M-TheBankOfRandomCredit-CardServices-AuthorizationService-#ctor-OpenCardServices-Validator-ICreditCardValidator-'></a>
 ### #ctor(creditCardValidator) `constructor`
 
 ##### Summary
@@ -43,8 +43,8 @@ Create an authorizer using a provided credit card validator.
 | ---- | ---- | ----------- |
 | creditCardValidator | [OpenCardServices.Validator.ICreditCardValidator](#T-OpenCardServices-Validator-ICreditCardValidator 'OpenCardServices.Validator.ICreditCardValidator') | The ICreditCardValidator instance to use. |
 
-<a name='M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-Purchase-System-String,System-Decimal-'></a>
-### Purchase(cardNumber,amount) `method`
+<a name='M-TheBankOfRandomCredit-CardServices-AuthorizationService-Submit-System-String,System-String,System-String,System-String,System-Decimal-'></a>
+### Submit(number,name,expires,ccv,amount) `method`
 
 ##### Summary
 
@@ -60,5 +60,8 @@ A unique token tied to the transaction if the charge is allowed, or null if it i
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| cardNumber | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The card number to charge. |
+| number | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The card number to charge. |
+| name | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The name on the card. |
+| expires | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The expiration mm/yyyy of the card. |
+| ccv | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The credit card verification code. |
 | amount | [System.Decimal](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Decimal 'System.Decimal') | The amount to charge. |

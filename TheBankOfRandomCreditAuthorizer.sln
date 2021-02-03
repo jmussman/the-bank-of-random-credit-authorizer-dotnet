@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.808.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBankOfRandomCreditAuthorizer", "TheBankOfRandomCreditAuthorizer\TheBankOfRandomCreditAuthorizer.csproj", "{BD67AC6A-7BC4-493A-83EA-CBADB0E88A09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBankOfRandomCreditAuthorizerTest", "TheBankOfRandomCreditAuthorizerTest\TheBankOfRandomCreditAuthorizerTest.csproj", "{6D42F257-D87A-47C9-9A15-C34F5EF76281}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBankOfRandomCreditAuthorizerTest", "TheBankOfRandomCreditAuthorizerTest\TheBankOfRandomCreditAuthorizerTest.csproj", "{9E4DCEA1-1142-4D19-85A0-6B27B07EDCA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +17,10 @@ Global
 		{BD67AC6A-7BC4-493A-83EA-CBADB0E88A09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD67AC6A-7BC4-493A-83EA-CBADB0E88A09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD67AC6A-7BC4-493A-83EA-CBADB0E88A09}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6D42F257-D87A-47C9-9A15-C34F5EF76281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D42F257-D87A-47C9-9A15-C34F5EF76281}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D42F257-D87A-47C9-9A15-C34F5EF76281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4DCEA1-1142-4D19-85A0-6B27B07EDCA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E4DCEA1-1142-4D19-85A0-6B27B07EDCA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E4DCEA1-1142-4D19-85A0-6B27B07EDCA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4DCEA1-1142-4D19-85A0-6B27B07EDCA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,7 +33,7 @@ Global
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
 		$0.StandardHeader = $2
-		version = 1.0.2
+		version = 2.0.0
 		description = "@This library provides a credit card purchase payment authorizer that randomly authorizes a payment (50/50), but only if the credit card number is a valid card number. If the class constructor is called without arguments it instantiates its own ICreditCardValidator. If it is called with an ICardValidator instance then it uses that. This scenario allows for a demonstration of dependency injection without involving any other components.\n\nWhen paired with the sister project Everyone Is Authorized Client both libraries may be used to create a scenario to demonstrate the problems of a tightly coupled dependency in a SalesOrderManager class. Use this to demonstrate dependency injection and the Adapter Pattern to decouple the authorization from the SalesOrderManager, and then allow for a test-double to be injected in their place.  To setup this scenario use the default constructor for each class and ignore the internal card validation. In a real application the classes would not share the same validator interface, they only do in these libraries to help in the first scenario. "
 	EndGlobalSection
 EndGlobal

@@ -9,15 +9,15 @@ using OpenCardServices.Validator;
 
 namespace TheBankOfRandomCredit.CardServices {
 
-    public class BankOfRandomCreditAuthorizerTests {
+    public class AuthorizationServiceTests {
 
         Mock<ICreditCardValidator> moqCreditCardValidator;
-        BankOfRandomCreditAuthorizer authorizer;
+        AuthorizationService authorizationService;
 
         private void GivenMoqCreditCardValidator() {
 
             moqCreditCardValidator = new Mock<ICreditCardValidator>();
-            authorizer = new BankOfRandomCreditAuthorizer(moqCreditCardValidator.Object);
+            authorizationService = new AuthorizationService(moqCreditCardValidator.Object);
         }
 
         // Verifies the requirement that the credit card validator is actually used
@@ -35,7 +35,7 @@ namespace TheBankOfRandomCredit.CardServices {
 
             moqCreditCardValidator.Setup(m => m.ValidateCardNumber(cardNumber)).Returns(false);
 
-            authorizer.Purchase(cardNumber, new Decimal(100.0));
+            authorizationService.Submit(cardNumber, null, null, null, new Decimal(100.0));
 
             moqCreditCardValidator.Verify(v => v.ValidateCardNumber(cardNumber), Times.Once);
         }
