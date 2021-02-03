@@ -1,25 +1,25 @@
 <a name='assembly'></a>
-# The-Bank-of-Random-Credit-Authorizer
+# TheBankOfRandomCreditAuthorizer
 
 ## Contents
 
-- [BankOfRandomCreditAuthorizer](#T-com-thebankofrandomcredit-cardservices-BankOfRandomCreditAuthorizer 'com.thebankofrandomcredit.cardservices.BankOfRandomCreditAuthorizer')
-  - [#ctor()](#M-com-thebankofrandomcredit-cardservices-BankOfRandomCreditAuthorizer-#ctor 'com.thebankofrandomcredit.cardservices.BankOfRandomCreditAuthorizer.#ctor')
-  - [#ctor(creditCardValidator)](#M-com-thebankofrandomcredit-cardservices-BankOfRandomCreditAuthorizer-#ctor-com-wonderfulwidgets-retail-ICreditCardValidator- 'com.thebankofrandomcredit.cardservices.BankOfRandomCreditAuthorizer.#ctor(com.wonderfulwidgets.retail.ICreditCardValidator)')
-  - [Purchase(cardNumber,amount)](#M-com-thebankofrandomcredit-cardservices-BankOfRandomCreditAuthorizer-Purchase-System-String,System-Decimal- 'com.thebankofrandomcredit.cardservices.BankOfRandomCreditAuthorizer.Purchase(System.String,System.Decimal)')
+- [BankOfRandomCreditAuthorizer](#T-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer 'TheBankOfRandomCredit.CardServices.BankOfRandomCreditAuthorizer')
+  - [#ctor()](#M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-#ctor 'TheBankOfRandomCredit.CardServices.BankOfRandomCreditAuthorizer.#ctor')
+  - [#ctor(creditCardValidator)](#M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-#ctor-OpenCardServices-Validator-ICreditCardValidator- 'TheBankOfRandomCredit.CardServices.BankOfRandomCreditAuthorizer.#ctor(OpenCardServices.Validator.ICreditCardValidator)')
+  - [Purchase(cardNumber,amount)](#M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-Purchase-System-String,System-Decimal- 'TheBankOfRandomCredit.CardServices.BankOfRandomCreditAuthorizer.Purchase(System.String,System.Decimal)')
 
-<a name='T-com-thebankofrandomcredit-cardservices-BankOfRandomCreditAuthorizer'></a>
+<a name='T-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer'></a>
 ## BankOfRandomCreditAuthorizer `type`
 
 ##### Namespace
 
-com.thebankofrandomcredit.cardservices
+TheBankOfRandomCredit.CardServices
 
 ##### Summary
 
 Client interface to the credit card processing services for the Bank of Random Credit.
 
-<a name='M-com-thebankofrandomcredit-cardservices-BankOfRandomCreditAuthorizer-#ctor'></a>
+<a name='M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-#ctor'></a>
 ### #ctor() `constructor`
 
 ##### Summary
@@ -30,7 +30,7 @@ Create an authorizer using an instance of CreditCardValidator.
 
 This constructor has no parameters.
 
-<a name='M-com-thebankofrandomcredit-cardservices-BankOfRandomCreditAuthorizer-#ctor-com-wonderfulwidgets-retail-ICreditCardValidator-'></a>
+<a name='M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-#ctor-OpenCardServices-Validator-ICreditCardValidator-'></a>
 ### #ctor(creditCardValidator) `constructor`
 
 ##### Summary
@@ -41,9 +41,9 @@ Create an authorizer using a provided credit card validator.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| creditCardValidator | [com.wonderfulwidgets.retail.ICreditCardValidator](#T-com-wonderfulwidgets-retail-ICreditCardValidator 'com.wonderfulwidgets.retail.ICreditCardValidator') | The ICreditCardValidator instance to use. |
+| creditCardValidator | [OpenCardServices.Validator.ICreditCardValidator](#T-OpenCardServices-Validator-ICreditCardValidator 'OpenCardServices.Validator.ICreditCardValidator') | The ICreditCardValidator instance to use. |
 
-<a name='M-com-thebankofrandomcredit-cardservices-BankOfRandomCreditAuthorizer-Purchase-System-String,System-Decimal-'></a>
+<a name='M-TheBankOfRandomCredit-CardServices-BankOfRandomCreditAuthorizer-Purchase-System-String,System-Decimal-'></a>
 ### Purchase(cardNumber,amount) `method`
 
 ##### Summary

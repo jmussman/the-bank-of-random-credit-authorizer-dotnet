@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>com.thebankofrandomcredit.cardservices</RootNamespace>
-    <ReleaseVersion>1.0.1</ReleaseVersion>
+    <ReleaseVersion>1.0.2</ReleaseVersion>
     <PackageId>TheBankOfRandomCredit.Authorizer</PackageId>
     <Authors>Joel Mussman</Authors>
     <Copyright>Copyright © 2018-2021 Joel Mussman. All rights reserved.</Copyright>
@@ -11,13 +11,13 @@
     <PackageLicenseUrl>https://github.com/jmussman/the-bank-of-random-credit-authorizer-dotnet/blob/master/LICENSE.md</PackageLicenseUrl>
     <Owners>Joel Mussman</Owners>
     <PackageProjectUrl>https://github.com/jmussman/the-bank-of-random-credit-authorizer-dotnet</PackageProjectUrl>
-    <PackageReleaseNotes>Updated project configuration and description.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated dependencies and normalized namespace names.</PackageReleaseNotes>
     <Summary>C# class demonstrating tight coupling.</Summary>
     <Title>The Bank of Random Credit Authorizer</Title>
     <Description>This library provides a credit card purchase payment authorizer that randomly authorizes a payment (50/50), but only if the credit card number is a valid card number. If the class constructor is called without arguments it instantiates its own ICreditCardValidator. If it is called with an ICardValidator instance then it uses that. This scenario allows for a demonstration of dependcy injection without involving any other components.
 
 When paired with the sister project Everyone Is Authorized Client both libraries may be used to create a scenario to demonstrate the problems of a tightly coupled dependency in a SalesOrderManager class. Use this to demonstrate dependency injection and the Adapter Pattern to decouple the authorization from the SalesOrderManager, and then allow for a test-double to be injected in their place.  To setup this scenario use the default constructor for each class and ignore the internal card validation. In a real application the classes would not share the same validator interface, they only do in these libraries to help in the first scenario. </Description>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -25,12 +25,12 @@ When paired with the sister project Everyone Is Authorized Client both libraries
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType></DebugType>
-    <DocumentationFile>bin\Release\netcoreapp3.1\The-Bank-of-Random-Credit-Authorizer.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netcoreapp3.1\TheBankOfRandomCreditAuthorizer.xml</DocumentationFile>
     <CustomCommands>
       <CustomCommands>
         <Command>
           <type>AfterBuild</type>
-          <command>cp The-Bank-of-Random-Credit-Authorizer.md "${SolutionDir}/docs/index.md"</command>
+          <command>cp TheBankOfRandomCreditAuthorizer.md "${SolutionDir}/docs/index.md"</command>
           <workingdir>${TargetDir}</workingdir>
         </Command>
       </CustomCommands>
@@ -40,8 +40,8 @@ When paired with the sister project Everyone Is Authorized Client both libraries
     <Folder Include="CardServices\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="WonderfulWidgets.CreditCardValidator" Version="1.0.1" />
-    <PackageReference Include="Vsxmd" Version="1.4.5">
+    <PackageReference Include="WonderfulWidgets.CreditCardValidator" Version="1.0.2" />
+    <PackageReference Include="Vsxmd" Version="1.4.4">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>

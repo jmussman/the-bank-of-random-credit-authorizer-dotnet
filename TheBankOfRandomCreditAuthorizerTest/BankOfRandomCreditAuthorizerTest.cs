@@ -5,9 +5,9 @@
 using System;
 using Xunit;
 using Moq;
-using com.wonderfulwidgets.retail;
+using OpenCardServices.Validator;
 
-namespace com.thebankofrandomcredit.cardservices {
+namespace TheBankOfRandomCredit.CardServices {
 
     public class BankOfRandomCreditAuthorizerTests {
 

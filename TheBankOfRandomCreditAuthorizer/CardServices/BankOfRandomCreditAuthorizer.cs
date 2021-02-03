@@ -3,9 +3,9 @@
 //
 
 using System;
-using com.wonderfulwidgets.retail;
+using OpenCardServices.Validator;
 
-namespace com.thebankofrandomcredit.cardservices {
+namespace TheBankOfRandomCredit.CardServices {
 
     /// <summary>Client interface to the credit card processing services for the Bank of Random Credit.</summary>
     public class BankOfRandomCreditAuthorizer {
